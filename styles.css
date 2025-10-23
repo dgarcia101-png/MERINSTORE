@@ -1,0 +1,190 @@
+/* --- Paleta de Colores HSL y Variables Globales --- */
+:root {
+    /* HUE: 218° es un azul frío y consistente en toda la paleta */
+    --color-hue: 218;
+
+    /* PALETA PRINCIPAL (Basada en tu imagen) */
+    --color-azul-claro: hsl(var(--color-hue), 29%, 64%);     /* #869EC1 */
+    --color-azul-suave: hsl(var(--color-hue), 26%, 57%);     /* #758DIAF */
+    --color-azul-medio: hsl(var(--color-hue), 25%, 50%);     /* #647C9D */
+    --color-azul-oscuro: hsl(var(--color-hue), 24%, 43%);    /* #526B8B (Fondo principal/Navbar) */
+    --color-azul-profundo: hsl(var(--color-hue), 23%, 36%); /* #415A79 */
+
+    /* COLORES DE ACENTO/COMPLEMENTARIOS */
+    --color-acento-exito: hsl(139, 100%, 25%); /* Verde (para el precio, text-success) */
+    --color-acento-texto: hsl(0, 0%, 95%); /* Blanco muy suave para texto */
+    --color-acento-warn: hsl(38, 92%, 50%);  /* Amarillo (para promo/alerta) */
+    --color-acento-peligro: hsl(0, 91%, 29%); /* Rojo/Granate para acentos especiales */
+
+    /* Tipografía */
+    --fuente-principal: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* --- Estilos Base y Reseteo --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 1rem;
+    background-color: var(--color-azul-oscuro); 
+    color: var(--color-acento-texto);
+    font-family: var(--fuente-principal);
+    line-height: 1.6;
+}
+
+/* --- Estilos de Tipografía y Componentes --- */
+h1 {
+    color: var(--color-azul-claro);
+    border-bottom: 4px solid currentColor;
+}
+
+h2, h3, h4, h5, h6 {
+    color: var(--color-azul-suave); 
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: var(--color-acento-texto);
+}
+
+li {
+    color: var(--color-acento-texto); 
+}
+
+/* Enlaces */
+a {
+    color: var(--color-azul-claro);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--color-acento-warn); 
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--color-azul-profundo) !important; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .nav-link {
+    color: var(--color-acento-texto) !important;
+}
+
+.navbar-brand span {
+    color: var(--color-azul-claro);
+}
+
+/* BOTONES (Reemplazando estilos de Bootstrap) */
+.btn-dark {
+    background-color: var(--color-azul-profundo); 
+    border-color: var(--color-azul-medio);
+    color: var(--color-acento-texto);
+}
+
+.btn-dark:hover {
+    background-color: var(--color-azul-medio); 
+    border-color: var(--color-azul-claro);
+}
+
+/* CARDS y FONDOS */
+.card {
+    background-color: var(--color-azul-medio); 
+    border: 1px solid var(--color-azul-claro);
+}
+
+/* CLASES DE UTILIDAD DE BOOTSTRAP REEMPLAZADAS */
+.text-success {
+    color: var(--color-acento-exito) !important;
+}
+
+/* TABLA */
+.table {
+    --bs-table-bg: var(--color-azul-medio); 
+    --bs-table-color: var(--color-acento-texto);
+    --bs-table-striped-bg: var(--color-azul-oscuro); 
+}
+
+.table-dark {
+    --bs-table-bg: var(--color-azul-profundo);
+    --bs-table-color: var(--color-acento-texto);
+}
+
+td {
+    color: var(--color-acento-texto);
+}
+
+th {
+    color: var(--color-azul-claro);
+}
+
+/* BANNER */
+#banner.bg-dark {
+    background-color: var(--color-azul-profundo) !important;
+}
+
+#banner.bg-warning {
+    background-color: var(--color-acento-warn) !important;
+    color: #333 !important; 
+}
+
+/* FOOTER */
+footer.bg-dark {
+    background-color: var(--color-azul-profundo) !important;
+}
+
+
+/* ====== Botón flotante WhatsApp (CORRECCIÓN: VISIBLE POR DEFECTO) ====== */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;     
+  right: 20px;      
+  background-color: #25d366; 
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px; 
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  z-index: 1055;    
+  text-decoration: none;
+  transition: transform .2s ease, background-color .2s ease, opacity .2s ease;
+  
+  /* ESTAS LÍNEAS HACEN QUE EL BOTÓN SEA VISIBLE DESDE EL INICIO */
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Mantenemos la clase .show y el hover por si la quieres usar más tarde */
+.whatsapp-float.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus {
+  background-color: hsl(139, 100%, 20%);
+  transform: scale(1.08);
+  outline: none;
+}
+
+/* Evitamos que el botón tape el footer en pantallas pequeñas */
+@media (max-width: 575.98px) {
+  footer { padding-bottom: 84px; } 
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float { transition: none; }
+}

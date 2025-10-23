@@ -1,0 +1,414 @@
+MERIN STORE   
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego - Air Force 1 Sneakers</title>
+    <meta name="description" content="Página de calzado casual Air Force 1.">
+    <meta name="keywords" content="tenis, sneakers, nike, air force 1, moda, calzado, casual">
+    <meta name="author" content="Diego">
+    <meta name="copyright" content="©️ 2025 Diego. Todos los derechos reservados.">
+    <meta name="application-name" content="Air Force Store">
+    <meta name="generator" content="VSCode">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" aria-label="Navegación principal">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <span class="fw-semibold">Diego Sneakers</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tablaProductos">Inventario</a></li>
+                </ul>
+                <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalAviso"> Aviso </button>
+            </div>
+        </div>
+    </nav>
+    <header class="text-center my-4">
+        <h1>Air Force 1 Sneakers</h1>
+        <p>La colección de tenis casual más icónica de Diego</p>
+    </header>
+    <Section class="container my-3">
+        <div id="banner" class="p-4 rounded bg-dark text-white">
+            <h2 class="h4 mb-2">Promo de la semana</h2>
+            <p class="mb-0">Envio gratis a partir del segundo par</p>
+        </div>
+        <button id="btnPromo" class="btn btn-warning btn-sm mt-2"> Actualizar promocion </button>
+    </Section>
+    <div class="container mt-3">
+        <div class="alert alert-info" role="alert">
+            Lanzamiento exclusivo: nuevos <strong>Air Force 1</strong> en blanco y negro. 👟
+        </div>
+    </div>
+    <div id="heroCarousel" class="carousel slide mb-4 container" data-bs-ride="carousel" aria-label="Promociones destacadas">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner rounded-3 shadow-sm">
+            <div class="carousel-item active">
+                <img src="img/air-force.png" class="d-block w-100" alt="Air Force 1 Blanco"
+                    style="height:380px; object-fit:cover;">
+                <div class="carousel-caption d-none d-md-block text-start">
+                    <h5>Air Force 1 Blanco</h5>
+                    <p>Un clásico atemporal</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/air-forceblk.png" class="d-block w-100" alt="Air Force 1 Negro"
+                    style="height:380px; object-fit:cover;">
+                <div class="carousel-caption d-none d-md-block text-end">
+                    <h5>Air Force 1 Negro</h5>
+                    <p>Estilo moderno y versátil</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"
+            aria-label="Anterior">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"
+            aria-label="Siguiente">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+    <main class="container my-4">
+        <div class="row g-4">
+            <div class="col-12 col-lg-8" id="catalogo">
+                <div class="card shadow-sm mb-4">
+                    <div class="row g-0">
+                        <div class="col-md-5">
+                            <img src="img/air-force.png" alt="Air Force 1 Blanco" class="img-fluid">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h2 class="card-title h4 mb-2">Air Force 1 Blanco</h2>
+                                <p class="card-text mb-1">Tenis casuales de Nike, versátiles para cualquier ocasión.</p>
+                                <p class="card-text fs-5 fw-semibold text-success">Precio: $2,000 MXN</p>
+                                <a href="#" class="btn btn-dark btn-sm">Comprar ahora</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card shadow-sm mb-4">
+                    <div class="row g-0">
+                        <div class="col-md-5">
+                            <img src="img/air-forceblk.png" alt="Air Force 1 Negro" class="img-fluid">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h2 class="card-title h4 mb-2">Air Force 1 Negro</h2>
+                                <p class="card-text mb-1">Un básico moderno que combina estilo y comodidad.</p>
+                                <p class="card-text fs-5 fw-semibold text-success">Precio: $2,000 MXN</p>
+                                <a href="#" class="btn btn-dark btn-sm">Comprar ahora</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="mt-4" id="tablaProductos">
+                    <h3 class="h5 mb-3">Tabla de productos:</h3>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Air Force 1 Blanco</td>
+                                    <td>$2,000</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>Air Force 1 Negro</td>
+                                    <td>$2,000</td>
+                                    <td>5</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="fw-bold">
+                                    <td colspan="2">Total de productos</td>
+                                    <td>10</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            <section class="my-5">
+                <h3 class="h5 mb-3">Más información:</h3>
+                <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#infoExtra" aria-expanded="false" aria-controls="infoExtra">
+                    Mostrar/Ocultar
+                </button>
+                </p>
+                <div class="collapse" id="infoExtra">
+                    <div class="card card-body">
+                        <strong> colapsable </strong>
+                    </div>
+                </div>
+            </section>
+            <section class="my-5">
+                <h3 class="h5 mb-3">Preguntas frecuentes:</h3>
+                <div class="accordion" id="miAcordeon">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="encabezadoUno">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelUno"
+                                aria-expanded="true" aria-controls="panelUno">
+                                ¿Cuanto tarda el envío?
+                            </button>
+                        </h2>
+                        <div id="panelUno" class="accordion-collapse collapse show" aria-labelledby="encabezadoUno"
+                            data-bs-parent="#miAcordeon">
+                            <div class="accrdion-body"> los envios tardan entre 2 y 5 días hábile, dependiendo de tu ubicación.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="encabezadoDos">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelDos"
+                                aria-expanded="false" aria-controls="panelDos">
+                                Si no me gusta ¿Puedo deovlver el producto?
+                            </button>
+                        </h2>
+                        <div id="panelDos" class="accordion-collapse collapse" aria-labelledby="encabezadoDos"
+                            data-bs-parent="#miAcordeon">
+                            <div class="accrdion-body"> Si, tienes 7 días para devolver el producto y obtener un reembolso
+                                completo. </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="encabezadoTres">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelTres"
+                                aria-expanded="false" aria-controls="panelTres">
+                                ¿hay mas pares distintos?
+                            </button>
+                        </h2>
+                        <div id="panelTres" class="accordion-collapse collapse" aria-labelledby="encabezadoTres"
+                            data-bs-parent="#miAcordeon">
+                            <div class="accrdion-body"> si, contacta para saber disponibilidad </div>
+                        </div>
+                    </div>
+                    <section id="pedido" class="my-5">
+                        <h3 class="h5 mb-3">Hacer pedido</h3>
+                        <ul class="nav nav-pills mb-3" id="pillsPedido" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-producto-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-producto" type="button" role="tab" aria-controls="pills-producto"
+                                    aria-selected="true"> 1) Producto </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-personaliza-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-personaliza" type="button" role="tab" aria-controls="pills-personaliza"
+                                    aria-selected="false"> 2) Personaliza </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-notas-tab" data-bs-toggle="pill" data-bs-target="#pills-notas"
+                                    type="button" role="tab" aria-controls="pills-notas" aria-selected="false"> 3) Envío/Notas </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pillsPedidoContent">
+                            <div class="tab-pane fade show active" id="pills-producto" role="tabpanel"
+                                aria-labelledby="pills-producto-tab" tabindex="0">
+                                <form aria-label="Formulario de pedido (sin lógica por ahora)">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="selModelo" class="form-label">Modelo</label>
+                                            <select id="selModelo" class="form-select">
+                                                <option value="" selected disabled>Elige un modelo</option>
+                                                <option>Air force blanco</option>
+                                                <option>Air force negro</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="selTalla" class="form-label">Talla</label>
+                                            <select id="selTalla" class="form-select">
+                                                <option value="" selected disabled>Elige</option>
+                                                <option>25cm</option>
+                                                <option>26cm</option>
+                                                <option>27cm</option>
+                                                <option>28cm</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="selColor" class="form-label">Color</label>
+                                            <select id="selColor" class="form-select">
+                                                <option value="" selected disabled>Elige</option>
+                                                <option>Aleatorio</option>
+                                                <option>Blanco/Negro</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="inpCantidad" class="form-label">Cantidad</label>
+                                            <input id="inpCantidad" type="number" min="1" value="1" class="form-control">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="nombreCliente" class="form-label">Tu nombre</label>
+                                            <input type="text" id="nombreCliente" class="form-control" placeholder="Escribe tu nombre">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="pills-personaliza" role="tabpanel"
+                                aria-labelledby="pills-personaliza-tab" tabindex="0">
+                                <p class="mb-2">Opciones de personalización (maqueta):</p>
+                                <div class="row g-3">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="chkNombreNumero">
+                                            <label class="form-check-label" for="chkNombreNumero">Nombre </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="chkParcheLiga">
+                                            <label class="form-check-label" for="chkParcheLiga">agujetas con pin metalico</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="inpNombre" class="form-label">Nombre (opcional)</label>
+                                        <input id="inpNombre" type="text" class="form-control" placeholder="Ej: LAUTARO">
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="inpNumero" class="form-label">Número (opcional)</label>
+                                        <input id="inpNumero" type="number" min="0" max="99" class="form-control" placeholder="10">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-notas" role="tabpanel" aria-labelledby="pills-notas-tab"
+                                tabindex="0">
+                                <div class="mb-3">
+                                    <label for="txtInstrucciones" class="form-label">Instrucciones específicas</label>
+                                    <textarea id="txtInstrucciones" class="form-control" rows="3"
+                                        placeholder="Ej: empaquetar para regalo"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="selEnvio" class="form-label">Envío</label>
+                                    <select id="selEnvio" class="form-select">
+                                        <option>Recoger en tienda</option>
+                                        <option>Envío estándar</option>
+                                        <option>Envío express</option>
+                                    </select>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button type="button" class="btn btn-success">Generar pedido (maqueta)</button>
+                                    <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                <div class="card mb-3">
+                    <div class="card-header">Sneakers exclusivos</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Edición Limitada</h5>
+                        <p class="card-text">Air Force 1 en combinaciones únicas.</p>
+                        <a href="#catalogo" class="btn btn-dark btn-sm">Explorar</a>
+                    </div>
+                </div>
+                <div class="card mb-3" style="width: 100%;">
+                    <img src="img/air-force.png" class="card-img-top" alt="Imagen ejemplo">
+                    <div class="card-body">
+                        <h5 class="card-title">Colección 2025</h5>
+                        <p class="card-text">Los clásicos renovados para esta temporada.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">Colección</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Nike Air Force</h5>
+                        <p class="card-text">Tenis que definen el estilo urbano y casual.</p>
+                        <a href="#" class="btn btn-dark btn-sm">Ver más</a>
+                    </div>
+                    <div class="card-footer">By Diego</div>
+                </div>
+        </div>
+    </main>
+    <section id="contacto" class="container my-5">
+        <h3 class="h5 mb-3">Contacto</h3>
+        <form id="formContacto" class="row g-3" aria-label="Formulario de Contacto">
+            <div class="col-md-6">
+                <label for="cNombre" class="form-label"> Nombre </label>
+                <input type="text" id="cNombre" name="nombre" class="from-control" placeholder="Tu nombre">
+            </div>
+            <div class="col-md-6">
+                <label for="cEmail" class="form-label"> Email</label>
+                <input type="email" id="cEmail" class="form-control" placeholder="tucorre@ejemplo.com">
+            </div>
+    </section>
+    <div class="modal fade" id="modalAviso" tabindex="-1" aria-labelledby="modalAvisoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalAvisoLabel">Aviso importante</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body"> Promoción especial: envío gratis en compras mayores a $3,000 MXN. </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#catalogo" class="btn btn-dark btn-sm">Ver productos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="testimonios" class="container my-5">
+        <h3 class="h5 mb-3">Testimonios</h3>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="p-3 border rounded testimonio testimonio-vip">
+                    <h4 class="h6 mb-1">Manuel (VIP)</h4>
+                    <p class="mb-0">Excelente servicio</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="p-3 border rounded testimonio">
+                    <h4 class="h6 mb-1">Raul</h4>
+                    <p class="mb-0">Super comodos y combinan con todo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <a href="https://wa.me/527221234567" target="_blank" rel="noopener" aria-label="Chatea por WhatsApp" class="whatsapp-float">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+    <footer class="bg-dark text-center text-white py-3 mt-5">
+        © 2025 MERIN | Siguenos en redes sociales
+        <div class="mt-2">
+            <a href="https://www.facebook.com/tuusuario" target="_blank" rel="noopener" class="text-white me-3"
+                aria-label="Facebook">
+                <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/tuusuario" target="_blank" rel="noopener" class="text-white me-3"
+                aria-label="Instagram">
+                <i class="fab fa-instagram fa-lg" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.tiktok.com/@tuusuario" target="_blank" rel="noopener" class="text-white me-3"
+                aria-label="TikTok">
+                <i class="fab fa-tiktok fa-lg" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.youtube.com/c/tuusuario" target="_blank" rel="noopener" class="text-white me-3"
+                aria-label="YouTube">
+                <i class="fab fa-youtube fa-lg" aria-hidden="true"></i>
+            </a>
+            <a href="https://x.com/tuusuario" target="_blank" rel="noopener" class="text-white" aria-label="X">
+                <i class="fab fa-x-twitter fa-lg" aria-hidden="true"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
